@@ -201,3 +201,24 @@ textarea {
 }
 
 /* H */
+
+.title {
+  font-family: var(--title-font-family);
+  font-weight: 300;
+  text-transform: uppercase; /* 발상 유의. 표현계층에서 uppercase 재확인 */
+}
+
+.main-title {
+  font-size: clamp(5rem, 10vw, 10rem); /* caution : clamp */
+  text-align: center;
+  line-height: 1.2;
+}
+
+.inline-image {
+  width: 7rem;
+  height: 7rem;
+  background: url("/images/Darth_Vader.png") top center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border-bottom-left-radius: 0;
+}
