@@ -1,0 +1,11 @@
+.title {
+  font-family: var(--title-font-family);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: clamp(5rem, 10vw, 10rem);
+  text-align: center;
+  line-height: 1.2;
+}
