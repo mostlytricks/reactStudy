@@ -5,6 +5,8 @@ import styled from "styled-components";
 import "./portfolio.css";
 import "./portfolioAbout.css";
 
+import dimg from "./assets/Darth_Vader.png";
+
 import {
   DiHtml5,
   DiCss3,
@@ -25,11 +27,14 @@ const About = () => {
               길은 멉니다. 하나 둘 <span className="text-bold">셋</span> 하면
               화이팅 하시죠. 하나 둘 <br />
               <span className="text-bold">화이팅!</span>
+              그리고 다음 이미지는 하기와 같습니다 짜잔 <br />
+              <span className="text-bold">Anakin says, </span> " I'm your father
+              " <br />
             </p>
           </div>
           <div className="scroll-reveal-right">
             <div className="description-image has-sparkles">
-              <img src="./assets/Darth_Vader.png" alt=""></img>
+              <img src={dimg} alt=""></img>
             </div>
           </div>
         </div>

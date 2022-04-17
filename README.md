@@ -18,4 +18,3 @@
   - problem is : in react, including images very limited in src&routes. only can call the items from src or modules.
     - react icons are still powerful, but we do need more - custom images, blablabla.
     - or fully opened web dev, we may use cdn. but in this case, it is not.
-    - 
