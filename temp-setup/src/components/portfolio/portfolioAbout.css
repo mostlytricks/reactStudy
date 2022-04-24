@@ -1,0 +1,78 @@
+/*css grid uses*/
+
+.section-description {
+  gap: 2.5rem;
+}
+
+.description {
+  text-transform: uppercase;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.description-image {
+  width: 25rem;
+  height: 25rem;
+  margin: 0 auto;
+  transform: rotate(25deg);
+}
+.description-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.description-image.has-sparkles::before,
+.description-image.has-sparkles::after {
+  width: 2rem;
+  height: 2rem;
+}
+
+.description-image.has-sparkles::before {
+  top: 2rem;
+  right: 1rem;
+}
+
+.description-image.has-sparkles::after {
+  top: 10rem;
+  right: -1rem;
+}
+
+.tech-stack {
+  max-width: 50rem;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  gap: 2.5rem;
+}
+.tech-stack-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.tech-stack-item i {
+  font-size: 5rem;
+  opacity: 0.5;
+}
+.dark-theme .tech-stack-item i {
+  opacity: 0.8;
+}
+
+.tech-stack-item::before,
+.tech-stack-item::after {
+  position: absolute;
+  top: -1rem;
+  transform: translateY(-100%);
+  /* opacity: 0; */
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.tech-stack-item::before {
+  content: "";
+  border: 1rem solid transparent;
+  border-top-color: var(--dark-color);
+  transform: translateY(0);
+  z-index: 5;
+}

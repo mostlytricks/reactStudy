@@ -18,3 +18,10 @@
   - problem is : in react, including images very limited in src&routes. only can call the items from src or modules.
     - react icons are still powerful, but we do need more - custom images, blablabla.
     - or fully opened web dev, we may use cdn. but in this case, it is not.
+
+- 2022.04.24 : need to rewind ~1:34:00,
+  - npm broken :p
+    - trying to change the node v14 to v16, but it crashed as well
+
+  - so make new proj with node 18! >> temp-setup
+  - 
