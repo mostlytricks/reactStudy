@@ -42,8 +42,10 @@
 }
 
 .tech-stack {
+  /*tech-stack은 grid처리(portfolio)*/
   max-width: 50rem;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  margin-top: 4rem;
   gap: 2.5rem;
 }
 .tech-stack-item {
@@ -65,14 +67,37 @@
   position: absolute;
   top: -1rem;
   transform: translateY(-100%);
-  /* opacity: 0; */
+  opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
 }
 
 .tech-stack-item::before {
+  /*화살표모양 만드는 팁. border-top-color*/
   content: "";
   border: 1rem solid transparent;
   border-top-color: var(--dark-color);
+  /* border-bottom-color: var(--dark-color); 이건 역으로 화살표 */
   transform: translateY(0);
   z-index: 5;
+}
+
+.tech-stack-item::after {
+  content: attr(
+    data-tooltip
+  ); /*html의 data-tooltip 속성 그대로 가져옴, 기준은 앞선 .tech-stack-item */
+  width: max-content;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.tech-stack-item:hover::before {
+  opacity: 1; /*hover상황에 대해 ::before 컨텍스트 변경 유의*/
+  transform: translateY(-0.3rem);
+}
+.tech-stack-item:hover::after {
+  opacity: 1; /*hover상황에 대해*/
+  transform: translateY(calc(-100% - 0.2rem));
+  /*before은 화살표, after은 네모 박스 + 내용 유의할 것*/
 }

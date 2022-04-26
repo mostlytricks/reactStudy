@@ -46,25 +46,25 @@ const About = () => {
             </i>
           </div>
 
-          <div className="tech-stack-item" data-tooltip="HTML5">
+          <div className="tech-stack-item" data-tooltip="CSS3">
             <i className="bx bxl-css3">
               <DiCss3></DiCss3>
             </i>
           </div>
 
-          <div className="tech-stack-item" data-tooltip="HTML5">
+          <div className="tech-stack-item" data-tooltip="JavaScript">
             <i className="bx bxl-javascript">
               <DiJavascript></DiJavascript>
             </i>
           </div>
 
-          <div className="tech-stack-item" data-tooltip="HTML5">
+          <div className="tech-stack-item" data-tooltip="React">
             <i className="bx bxl-react">
               <DiReact></DiReact>
             </i>
           </div>
 
-          <div className="tech-stack-item" data-tooltip="HTML5">
+          <div className="tech-stack-item" data-tooltip="Python">
             <i className="bx bxl-python">
               <DiPython></DiPython>
             </i>

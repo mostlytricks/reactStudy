@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { BiToggleLeft, BiToggleRight, BiMenu, BiX } from "react-icons/bi";
-import './portfolio.css';
-
+import "./portfolio.css";
 
 const HeaderStyled = styled.div``;
 
@@ -26,28 +25,28 @@ const Header = () => {
         menuToggleButton.classList.remove("active");
       });
     });
-    menuToggleButton.addEventListener("click", toggleMenu);
-  
-    const bodyElement = document.querySelector("body"); // or, docuemnt.body;
-    const themeToggleButton = document.querySelector('.theme-toggle-button');
-    const currentTheme = localStorage.getItem('darkTheme');
-    
-    if(currentTheme){
-        bodyElement.classList.add("dark-theme");
-    };
 
-    const toggleTheme = () =>{
-        bodyElement.classList.toggle('dark-theme');
-        if( bodyElement.classList.contains('dark-theme')){
-            localStorage.setItem('darkTheme', 'active');
-        } else {
-            localStorage.removeItem('darkTheme');
-        }
+    menuToggleButton.addEventListener("click", toggleMenu);
+
+    const bodyElement = document.querySelector("body"); // or, docuemnt.body;
+    const themeToggleButton = document.querySelector(".theme-toggle-button");
+    const currentTheme = localStorage.getItem("darkTheme");
+
+    if (currentTheme) {
+      bodyElement.classList.add("dark-theme");
     }
 
-    themeToggleButton.addEventListener('click', toggleTheme);
-}, []);
+    const toggleTheme = () => {
+      bodyElement.classList.toggle("dark-theme");
+      if (bodyElement.classList.contains("dark-theme")) {
+        localStorage.setItem("darkTheme", "active");
+      } else {
+        localStorage.removeItem("darkTheme");
+      }
+    };
 
+    themeToggleButton.addEventListener("click", toggleTheme);
+  }, []);
 
   return (
     <div id="home">
@@ -67,8 +66,7 @@ const Header = () => {
             <i className="bx bx-x close-icon">
               <BiX></BiX>
             </i>
-            
-                    </button>
+          </button>
           <button
             type="button"
             className="button icon-button theme-toggle-button"
